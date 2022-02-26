@@ -1,0 +1,18 @@
+#venv#
+venv/
+main/
+
+#docs#
+docs/
+model/truncated_df_test.pkl
+model/truncated_df_train.pkl
+model/BM25_model.pkl
+model/database.pkl
+model/features_1.pkl
+model/features_1_test.pkl
+model/basic_features_test.pkl
+model/basic_features.pkl
+model/
+
+# Backup files #
+model_zip/
