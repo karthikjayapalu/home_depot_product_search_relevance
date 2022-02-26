@@ -3,8 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Home Depot Search Relevance",page_icon="👾",layout="wide")	# Set the page title and icon
 
 st.title("Home Depot Search Relevance")																																			# Set the title of the page
-st.text("""Please enter your search query in the text box below to fetch the top 10 relevant products 
-and its relevance score""")	# Set the text of the page
+st.text("""Please enter your search query in the text box below to fetch the top 10 relevant products and its relevance score""")	# Set the text of the page
 import pandas as pd
 import numpy as np
 import regex as re
@@ -14,39 +13,25 @@ import regex as re
 from nltk.corpus import stopwords
 from collections import Counter
 from nltk.stem import PorterStemmer
-# from wordcloud import STOPWORDS
-# from prettytable import PrettyTable
 import warnings
-
 warnings.filterwarnings('ignore')
 import math
 from nltk import sent_tokenize
 from nltk.stem import WordNetLemmatizer
 from gensim.models import Word2Vec
 from numpy.linalg import norm
-import pickle
 from tqdm.notebook import tqdm
-from scipy.stats import uniform, randint, loguniform
-# !pip install rank_bm25
-from tqdm import tqdm
-
 tqdm.pandas()
+import pickle
 from nltk.metrics.distance import edit_distance
 from nltk.metrics.distance import jaccard_distance
-# from gensim.test.utils import common_texts, get_tmpfile
-# from gensim.models import Word2Vec
-# from gensim.models.callbacks import CallbackAny2Vec
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk import ngrams
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
-from flask import Flask, jsonify, request
-import json
-# from rank_bm25 import BM25Okapi
 
-# import flask
 
-# app = Flask(__name__)
+
 print('Imports Done!')
 
 # """**BM25**"""
@@ -57,12 +42,6 @@ product_text = database['text'].values
 
 infile = open('./model/BM25_model.pkl', 'rb')
 bm25_model = pickle.load(infile)
-
-
-# corpus = database['text'].values
-# tokenized_corpus = [doc.split(" ") for doc in corpus]
-#
-# bm25_model = BM25Okapi(tokenized_corpus)
 
 
 def words(text): return re.findall(r'\w+', text.lower())
