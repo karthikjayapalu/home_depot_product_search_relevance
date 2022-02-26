@@ -36,7 +36,7 @@ print('Imports Done!')
 
 # """**BM25**"""
 
-database = pd.read_pickle('./model/database_mini.csv')
+database = pd.read_pickle('./model/db_mini.csv')
 
 
 
