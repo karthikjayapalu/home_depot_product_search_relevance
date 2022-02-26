@@ -46,6 +46,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 from flask import Flask, jsonify, request
 import json
+from rank_bm25 import BM25Okapi
 
 import flask
 app = Flask(__name__)
@@ -60,6 +61,13 @@ product_text = database['text'].values
 
 infile = open('./model/BM25_model.pkl','rb')
 bm25_model = pickle.load(infile)
+
+
+# corpus = database['text'].values
+# tokenized_corpus = [doc.split(" ") for doc in corpus]
+#
+# bm25_model = BM25Okapi(tokenized_corpus)
+
 
 def words(text): return re.findall(r'\w+', text.lower())
 WORDS = Counter(words(open('./model/corpus.txt').read()))
