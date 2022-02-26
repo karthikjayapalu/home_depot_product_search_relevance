@@ -36,7 +36,9 @@ print('Imports Done!')
 
 # """**BM25**"""
 
-database = pd.read_pickle('./model/database.pkl')
+database = pd.read_pickle('./model/database_mini.csv')
+
+
 
 product_text = database['text'].values
 
