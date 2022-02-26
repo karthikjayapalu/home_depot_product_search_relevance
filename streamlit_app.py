@@ -42,7 +42,7 @@ database = pd.read_pickle('./model/db_mini.csv')
 
 product_text = database['text'].values
 
-infile = open('./model/BM25_model.pkl', 'rb')
+infile = open('./model/BM25_model_mini.pkl', 'rb')
 bm25_model = pickle.load(infile)
 
 
