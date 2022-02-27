@@ -46,7 +46,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 from flask import Flask, jsonify, request
 import json
-from rank_bm25 import BM25Okapi
+# from rank_bm25 import BM25Okapi
 
 import flask
 app = Flask(__name__)
@@ -55,11 +55,11 @@ print('Imports Done!')
 
 """**BM25**"""
 
-database = pd.read_pickle('./model/database.pkl')
+database = pd.read_csv('./model/db_mini.csv')
 
 product_text = database['text'].values
 
-infile = open('./model/BM25_model.pkl','rb')
+infile = open('./model/BM25_model_mini.pkl','rb')
 bm25_model = pickle.load(infile)
 
 
