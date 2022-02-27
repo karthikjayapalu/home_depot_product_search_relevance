@@ -9,7 +9,7 @@ Scope of the project: Use Machine Learning models to accurately predict the rele
 
 Dataset: https://www.kaggle.com/c/home-depot-product-search-relevance/data
 
-## App link:https://streamlit-hgmohcuk7a-et.a.run.app/
+## App link:https://streamlit-hgmohcuk7a-as.a.run.app/
 
 ## Source Code Folder structure:
 
