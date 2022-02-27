@@ -18,7 +18,7 @@ Dataset: https://www.kaggle.com/c/home-depot-product-search-relevance/data
 
 Clone the repo using git clone:
 ```
-git clone 
+git clone https://github.com/karthikjayapalu/home_depot_product_search_relevance.git
 ```
 Install dependencies using pip:
 ```
