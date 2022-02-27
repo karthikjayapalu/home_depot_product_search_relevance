@@ -25,7 +25,8 @@ Install dependencies using pip:
 pip install -r requirements.txt  
 ```
 Go to CMD and run the following command:
+
 ```
 streamlit run streamlit_app.py 
 ```
-(Run it from the root directory of the project).
+Note: run it from the root directory of the project.
